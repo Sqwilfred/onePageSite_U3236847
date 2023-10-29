@@ -1,0 +1,185 @@
+﻿body {
+    color: white; /*presets the text colour for whole page*/
+}
+
+#main_section {
+    width: 100%; 
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px 200px 20px; /*main heading isn't pushed against top of background*/
+    object-fit: cover;
+}
+
+#main_heading_top { /*top and bottom heading have different emphasis in style*/
+    text-align: center;
+    font-size: 5vw;
+    padding-bottom: 10vh;
+}
+
+#main_heading_bottom {
+    text-align: center;
+    font-size: 3vw;
+    padding-bottom: 5vw;
+}
+
+.section_heading_style {
+    text-align: center;
+    font-family: "Times New Roman", 'Times New Roman', Times, serif; /*I like this font*/
+    font-size: 2vw;
+    margin-bottom: 0.5vh; /*this creates a nice gap between heading and paragraph*/
+}
+
+.section_paragraph_style { 
+    font-family: "Times New Roman", 'Times New Roman', Times, serif;
+    font-size: 1.2vw; 
+}
+
+.section_default_style { /*default style creates padding between sections*/
+    padding-top: 5vh;
+}
+
+.section_final_style { /*final style having an added bottom gap so it doesn't cram against bottom heading section*/
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.section_image_style { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 15%; /*corner curves = looks good*/
+}
+
+.video_div {
+    width: 100%;
+    height: auto;
+    position: relative; 
+    background-size: cover;
+    background-position: center; 
+}
+
+#defaultCanvas0 { /*canvas that p5 creates*/
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: +1; /*canvas is on a layer above the other page elements
+    for the world to see my amazing drawing skills*/
+}
+
+#background_video {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; 
+    z-index: -2; /*video behind everything else*/
+    filter: brightness(0.75); /*video was a bit intense in default state*/
+}
+
+.hover-section { /*class to apply transition effects and style text sections*/
+    padding: 20px;
+    transition: opacity 5s;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15%; 
+    height: 100%;
+    width: 100%;
+}
+
+.hover-section:hover {
+    background-color: rgb(129,196,57);
+    }
+
+nav { 
+    padding-top: 45vh; /*pushes nav bar elements to middle of screen*/
+    height: 100vh;
+    width: 100%;
+    background-image: url(Assets/Images/nav_background.webp);
+    background-size: 100vw; /*the sky image adjusts to page size*/
+}
+
+.nav_default_style {
+    list-style-type: none; 
+    padding: 1vw;
+    margin: 0vw;
+}
+
+.guide_text { /*class to format 'Press T for Trash' text*/
+    color: white;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: 5vh;
+    font-size: 2vw;
+}
+
+li { /*nav bar element styling*/
+    display: inline-block; 
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    margin-right: 20px;
+}
+
+.nav_default_style >div >div { /*class for styling the bootstrap column system, which 
+    basically partitions the screen into columns for easier formating. In this case,
+    I am styling the columns and centering their contained nav bar elements*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(129,196,57);
+    border-radius: 20%;
+}
+
+.col-3 { /*this is directly targeting the columns for the nav bar elements, which is 
+    convenient (but somewhat lazy) because I have not used col-3 anywhere else*/
+    background-clip: padding-box;
+    border: 10px solid transparent;
+}
+
+.nav_default_style >div >div >a { /*yet another styling class for the nav bar elements,
+    but this is specifically for the text positioning because bootstrap is annoying*/
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+    color: #fff; 
+    padding: 0.5em;
+}
+
+#nav_image { /*this makes the sky look pretty*/
+    text-decoration: none;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 5;
+    top: 10px; 
+    right: 20px; 
+}
+
+.out { /*for treating multiple elements (text and heading) as one, inside a div,
+    for vertical allignment. This is surpisingly difficult, not recommended.*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner > p { /*targeting text allignment inside the div*/
+    margin: 0;
+    text-align: center;
+}
+
+.inner > h1 { /*targeting heading allignment inside the div*/
+    margin-bottom: 0.5vh;
+    text-align: center;
+}
